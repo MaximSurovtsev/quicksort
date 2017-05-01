@@ -1,2 +1,2 @@
-# Insert
-https://travis-ci.org/MaximSurovtsev/Insert
+# quicksort
+https://travis-ci.org/MaximSurovtsev/quicksort
