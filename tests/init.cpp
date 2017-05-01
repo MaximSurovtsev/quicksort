@@ -1,21 +1,18 @@
 #include <quicksort.hpp>
 #include <catch.hpp>
 
-SCENARIO("matrix sorting")
+SCENARIO("test")
 {
-  	int matrix[3][3] = { { 8, 2, 5 },
-			 { 10, 4, 11 },
-			 { 1, 12, 9 } };
-	int sorted_matrix[3][3] = { { 1, 2, 4 }, 
-				{ 5, 8, 9 }, 
-				{ 10, 11, 12 } };
-	int* first_ = &matrix[0][0];
-	int* second = &matrix[2][2];
-	insertion_sort(first_, second);
+  	int a[6] = { 2, 4, 1, 3, 7, 5 };
+	int b[6] = { 1, 2, 3, 4, 5, 7 };
+	int* i1 = &a[0];
+	int* i2 = &a[6];
+	quicksort(i1, i2);
 	bool check = true;
-	for (int i = 0; i < 3; i++)
-    	for(int j = 0; j < 3; j++)
-			if (matrix[i][j] != sorted_matrix[i][j])
-				check = false;
+	for (int i = 0; i < 6; ++i)
+	{
+		if (a[i] != b[i])
+			check = false;
+	}
 	REQUIRE(check == true);
 }
