@@ -1,4 +1,4 @@
-#include <insertion_sort.hpp>
+#include <quicksort.hpp>
 #include <catch.hpp>
 
 SCENARIO("matrix sorting")
